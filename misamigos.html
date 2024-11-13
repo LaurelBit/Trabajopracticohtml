@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amistades</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav content sidebar"
+          "footer footer footer";
+        grid-template-columns: 200px 1fr 300px;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        background-color: #ffe4e1; 
+      }
+      header {
+        grid-area: header;
+        background-color: #ff69b4; 
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        grid-area: nav;
+        background-color: #ffc0cb; 
+        padding: 20px;
+        box-shadow: 2px 0 5px #0000001a;
+      }
+      nav a {
+        display: block;
+        color: #333;
+        padding: 10px 0;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+      nav a:hover {
+        background-color: #ffb6c1;
+      }
+      .content {
+        grid-area: content;
+        padding: 20px;
+        text-align: center;
+      }
+      .sidebar {
+        grid-area: sidebar;
+        background-color: #ffe4e1; 
+        padding: 20px;
+        box-shadow: -2px 0 5px #0000001a;
+      }
+      section {
+        display: none;
+      }
+      section.active {
+        display: block;
+      }
+      footer {
+        grid-area: footer;
+        background-color: #ff69b4; 
+        color: white;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+    <script>
+      function showSection(sectionId) {
+        var sections = document.querySelectorAll("section");
+        sections.forEach((section) => section.classList.remove("active"));
+        document.getElementById(sectionId).classList.add("active");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Amistades</h1>
+    </header>
+
+    <nav>
+      <a href="javascript:void(0)" onclick="showSection('inicio')">Inicio</a>
+      <a href="javascript:void(0)" onclick="showSection('escolares')"
+        >Amistades Escolares</a
+      >
+      <a href="javascript:void(0)" onclick="showSection('universitarios')"
+        >Amistades Universitarias</a
+      >
+      <a href="javascript:void(0)" onclick="showSection('laboral')"
+        >Amistades Laborales</a
+      >
+      <a href="javascript:void(0)" onclick="showSection('otros')"
+        >Otras Amistades</a
+      >
+    </nav>
+
+    <div class="content">
+      <section id="inicio" class="active">
+        <h2>La importancia de la amistad</h2>
+        <p>
+          La amistad es uno de los pilares fundamentales de nuestras vidas. Nos
+          brinda apoyo, consuelo y alegría, y nos ayuda a enfrentar los retos
+          con una sonrisa...
+        </p>
+        <hr>
+        <table cellspacing="12" cellpadding="20">
+          <tr>
+            <th colspan="2"></th>
+          </tr>
+          <tr style="text-align: justify;">
+            <td>
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+            <td>
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="escolares">
+        <h2>Amistades Escolares</h2>
+        <p>Descripción sobre las amistades escolares...</p>
+        <hr>
+        <table cellspacing="12" cellpadding="20">
+          <tr>
+            <th colspan="2"></th>
+          </tr>
+          <tr style="text-align: justify;">
+            <td>
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+            <td>
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="universitarios">
+        <h2>Amistades Universitarias</h2>
+        <p>Descripción sobre las amistades universitarias...</p>
+        <hr>
+        <table cellspacing="12" cellpadding="20">
+          <tr>
+            <th colspan="2"></th>
+          </tr>
+          <tr style="text-align: justify;">
+            <td>
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+            <td>
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="laboral">
+        <h2>Amistades Laborales</h2>
+        <p>Descripción sobre las amistades laborales...</p>
+        <hr>
+        <table cellspacing="12" cellpadding="20">
+          <tr>
+            <th colspan="2"></th>
+          </tr>
+          <tr style="text-align: justify;">
+            <td>
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+            <td>
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="otros">
+        <h2>Otras Amistades</h2>
+        <p>Descripción sobre otras amistades...</p>
+        <hr>
+        <table cellspacing="12" cellpadding="20">
+          <tr>
+            <th colspan="2"></th>
+          </tr>
+          <tr style="text-align: justify;">
+            <td>
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+            <td>
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi arquitecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora incidunt ut labore
+              et dolore magnam aliquam quaerat voluptatem. , quis nostrum
+              ejercicio ullam corporis suscipit laboriosam, nisi ut aliquid ex
+              ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+              in ea voluptate velit esse quam nihil molestiae consequatur, vel
+              illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+
+    <aside class="sidebar">
+      <h3>Próxima Reunión</h3>
+      <form>
+        <label for="nombre">Nombre:</label><br />
+        <input type="text" id="nombre" name="nombre" /><br /><br />
+        <label for="email">Correo Electrónico:</label><br />
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="telefono">Número de Teléfono:</label><br />
+        <input type="tel" id="telefono" name="telefono" /><br /><br />        
+        <label for="tipo">Tipo de amistad:</label><br /> 
+        <select id="tipo" name="tipo">
+            <option value="escolar">Escolar</option>
+            <option value="universitario">Universitario</option>
+            <option value="laboral">Laboral</option>
+            <option value="otros">Otros</option></select> <br/> <br/>
+        <label for="fecha">Selecciona la fecha:</label><br />
+        <input type="date" id="fecha" name="fecha" /><br /><br />               
+
+        <button type="submit" style="background-color: #ff69b4;">Enviar</button>
+      </form>
+    </aside>
+
+    <footer>
+      <p>
+        Un amigo ama en todo momento, y un hermano nace para tiempos de
+        angustia. - Proverbios 17:17
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pasatiempos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6f6; 
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+        header {
+            background-color: #ffd1dc; 
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        nav {
+            background-color: #a1c4fd; 
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px #0000001a;
+            display: none;
+        }
+        #inicio {
+            display: block;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #a1c4fd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .center-content {
+            display: flex;
+            justify-content: center;
+        }
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+        .center-column {
+            background-color: #d7ffd9; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .center-column ol {
+            padding-left: 40px; /* para ajustar */
+        }
+        footer {
+            background-color: #ffd1dc; 
+            color: #a1c4fd;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Pasatiempos</h1>
+    </header>
+
+    <nav>
+        <a href="javascript:void(0)" onclick="showSection('inicio')">Inicio</a>
+        <a href="javascript:void(0)" onclick="showSection('musica')">Música</a>
+        <a href="javascript:void(0)" onclick="showSection('arte')">Arte</a>
+        <a href="javascript:void(0)" onclick="showSection('viajes')">Viajes</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenido</h2>
+        <p>Explora mis pasatiempos favoritos: música, arte y viajes.</p>
+    </section>
+
+    <section id="musica">
+        <h2>Música</h2>
+        <table>
+            <tr>
+                <th>Grupos de los 80</th>
+                <th>Grupos Nacionales</th>
+                <th>Baladas</th>
+                <th>Rock Alternativo</th>
+                <th>Instrumentales</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Queen</li>
+                        <li>The Cure</li>
+                        <li>Depeche Mode</li>
+                        <li>U2</li>
+                        <li>Bon Jovi</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Los Kjarkas</li>
+                        <li>Octavia</li>
+                        <li>Azul Azul</li>
+                        <li>Los Puchos</li>
+                        <li>Atajo</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Aerosmith</li>
+                        <li>Chicago</li>
+                        <li>Journey</li>
+                        <li>Scorpions</li>
+                        <li>Europe</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>R.E.M.</li>
+                        <li>Nirvana</li>
+                        <li>Radiohead</li>
+                        <li>Smashing Pumpkins</li>
+                        <li>Pearl Jam</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Yanni</li>
+                        <li>Jean-Michel Jarre</li>
+                        <li>Vangelis</li>
+                        <li>Kitaro</li>
+                        <li>Enya</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="arte">
+        <h2>Arte</h2>
+        <p>Las mejores pinturas de la Tierra:</p>
+        <table>
+            <tr>
+                <th>Nacionales</th>
+                <th>Internacionales</th>
+                <th>Mundiales</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>La Creación de la Pachamama - Mamani Mamani</li>
+                        <li>Retrato de Aimara - Cecilio Guzmán de Rojas</li>
+                        <li>La Chola Paceña - Walter Solón Romero</li>
+                        <li>El Gran Poder - Humberto Iporre Salinas</li>
+                        <li>Fiesta de la Candelaria - Gustavo Medinaceli</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>La Mona Lisa - Leonardo da Vinci</li>
+                        <li>La noche estrellada - Vincent van Gogh</li>
+                        <li>El Grito - Edvard Munch</li>
+                        <li>La persistencia de la memoria - Salvador Dalí</li>
+                        <li>Guernica - Pablo Picasso</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Las Meninas - Diego Velázquez</li>
+                        <li>La Última Cena - Leonardo da Vinci</li>
+                        <li>El Jardín de las Delicias - Hieronymus Bosch</li>
+                        <li>El Nacimiento de Venus - Sandro Botticelli</li>
+                        <li>La Libertad Guiando al Pueblo - Eugène Delacroix</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="viajes">
+        <h2>Viajes</h2>
+        <div class="center-content">
+            <div class="column"></div>
+            <div class="column center-column">
+                <p>Mis viajes realizados:</p>
+                <ol>
+                    <li>Bali, Indonesia - Julio 2020</li>
+                    <li>Santorini, Grecia - Agosto 2019</li>
+                    <li>Machu Picchu, Perú - Mayo 2018</li>
+                    <li>Kyoto, Japón - Abril 2017</li>
+                    <li>Cape Town, Sudáfrica - Octubre 2016</li>
+                </ol>
+                <p>Mis viajes nacionales:</p>
+                <ol>
+                    <li>Laguna Colorada, Bolivia - Marzo 2021</li>
+                    <li>Salar de Uyuni, Bolivia - Enero 2020</li>
+                    <li>Isla del Sol, Bolivia - Septiembre 2019</li>
+                    <li>Rurrenabaque, Bolivia - Junio 2018</li>
+                    <li>Parque Nacional Madidi, Bolivia - Febrero 2017</li>
+                </ol>
+                <p>Mis viajes internacionales:</p>
+                <ol>
+                    <li>París, Francia - Noviembre 2019</li>
+                    <li>Roma, Italia - Junio 2018</li>
+                    <li>Tokio, Japón - Abril 2017</li>
+                    <li>New York, Estados Unidos - Diciembre 2016</li>
+                    <li>Sídney, Australia - Febrero 2015</li>
+                </ol>
+            </div>
+            <div class="column"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>El tiempo es como el agua de un río: nada permanece, siempre es diferente.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="gyc" />
+    <meta
+      name="description"
+      content="Página sobre mi ciudad, Sucre capital de Bolivia."
+    />
+    <title>Mi ciudad</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background: #f01c1c;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        position: relative; /* Para posicionar las banderas */
+      }
+      header img {
+        position: absolute; /* Posicionamiento absoluto para las banderas */
+        top: 50%;
+        transform: translateY(-50%); /* Centrar verticalmente */
+      }
+      header img:first-of-type {
+        /* Bandera de Sucre */
+        left: 10px; /* Alineada a la izquierda */
+      }
+      header img:last-of-type {
+        /* Escudo de */
+        right: 10px; /* Alineada a la derecha */
+      }
+      main {
+        display: flex;
+        flex: 1; /* Permite que main ocupe el espacio restante */
+      }
+      aside {
+        width: 200px; /* Ancho fijo para el menú lateral */
+        background-color: #dddada;
+        padding: 20px;
+        border-right: 1px solid #ccc;
+      }
+      section {
+        padding: 20px;
+        flex: 3; /* Toma más espacio que aside */
+      }
+      .comentarios {
+        width: 300px; /* Ancho fijo para el área de comentarios */
+        padding: 20px;
+      }
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #f01c1c;
+        color: white;
+      }
+      form {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: #f01c1c;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: #f4e9e9;">MI CIUDAD</h1>
+      <img src="imagen/bsucre.jpeg" alt="Bandera de Sucre" width="150" />
+      <img src="imagen/sescudo.png" alt="Escucho de Sucre" width="80" />
+    </header>
+
+    <main>
+      <aside>
+        <nav>
+          <h2>Enlaces</h2>
+          <a href="#historia">Historia</a><br />
+          <a href="#lugares">Lugares de Interés</a><br />
+          <a href="#cultura">Cultura</a>
+        </nav>
+      </aside>
+
+      <section id="contenido">
+        <h2>Bienvenido a Sucre</h2>
+        <p>
+          Selecciona una sección del menú para conocer más sobre nuestra hermosa
+          ciudad.
+        </p>
+        <hr>
+
+        <div id="historia" style="display: none">
+          <h2>Historia</h2>
+          <p style="text-align: justify;">
+            Sucre es conocida por su rica historia y su papel como capital
+            constitucional de Bolivia. Fundada en 1538, ha sido un centro
+            importante para la cultura y la política del país. </p>
+            <br> 
+            <p style="text-align: justify;">
+            ¿Dónde puedo conseguir algo? Existen muchas variaciones de pasajes de Lorem Ipsum
+            disponibles, pero la mayoría han sufrido alguna alteración, ya sea
+            por humor añadido o palabras aleatorias que no parecen ni un poco
+            creíbles. Si va a utilizar un pasaje de Lorem Ipsum, debe asegurarse
+            de que no haya nada vergonzoso escondido en medio del texto. Todos
+            los generadores de Lorem Ipsum en Internet tienden a repetir
+            fragmentos predefinidos según sea necesario, lo que convierte a este
+            en el primer generador verdadero en Internet. Utiliza un diccionario
+            de más de 200 palabras latinas, combinado con un puñado de
+            estructuras de oraciones modelo, para generar un Lorem Ipsum que
+            parezca razonable. Por lo tanto, el Lorem Ipsum generado siempre
+            está libre de repeticiones, humor añadido o palabras no
+            características, etc.</p>
+            <br>
+            <p style="text-align: justify;">
+              ¿Dónde puedo conseguir algo? Existen muchas variaciones de pasajes de Lorem Ipsum
+              disponibles, pero la mayoría han sufrido alguna alteración, ya sea
+              por humor añadido o palabras aleatorias que no parecen ni un poco
+              creíbles. Si va a utilizar un pasaje de Lorem Ipsum, debe asegurarse
+              de que no haya nada vergonzoso escondido en medio del texto. Todos
+              los generadores de Lorem Ipsum en Internet tienden a repetir
+              fragmentos predefinidos según sea necesario, lo que convierte a este
+              en el primer generador verdadero en Internet. Utiliza un diccionario
+              de más de 200 palabras latinas, combinado con un puñado de
+              estructuras de oraciones modelo, para generar un Lorem Ipsum que
+              parezca razonable. Por lo tanto, el Lorem Ipsum generado siempre
+              está libre de repeticiones, humor añadido o palabras no
+              características, etc.</p>
+          
+        </div>
+
+        <div id="lugares" style="display: none">
+          <h2>Lugares de Interés</h2>
+
+          <!-- Primera fila con imágenes -->
+          <table style="width: 100%; border-collapse: collapse">
+            <!--inicia la tabla-->
+            <tr>
+              <td style="text-align: center; padding: 10px">
+                <figure>
+                  <img
+                    src="imagen/sucre1.jpg"
+                    alt="Plaza 25 de Mayo"
+                    style="width: 100%; height: auto"
+                  />
+                  <figcaption>Plaza 25 de Mayo</figcaption>
+                </figure>
+              </td>
+              <td style="text-align: center; padding: 10px">
+                <figure>
+                  <img
+                    src="imagen/sucre2.jpg"
+                    alt="Catedral Metropolitana"
+                    style="width: 70%; height: auto"
+                  />
+                  <figcaption>Catedral Metropolitana</figcaption>
+                </figure>
+              </td>
+              <td style="text-align: center; padding: 10px">
+                <figure>
+                  <img
+                    src="imagen/sucre3.jpg"
+                    alt="Casa de la Libertad"
+                    style="width: 100%; height: auto"
+                  />
+                  <figcaption>Casa de la Libertad</figcaption>
+                </figure>
+              </td>
+            </tr>
+            <!-- Segunda fila con imágenes -->
+            <tr>
+              <td style="text-align: center; padding: 10px">
+                <figure>
+                  <img
+                    src="imagen/sucre4.jpg"
+                    alt="Parque Simón Bolívar"
+                    style="width: 100%; height: auto"
+                  />
+                  <figcaption>Parque Simón Bolívar</figcaption>
+                </figure>
+              </td>
+              <td style="text-align: center; padding: 10px">
+                <figure>
+                  <img
+                    src="imagen/sucre5.jpg"
+                    alt="Museo Universitario Charcas"
+                    style="width: 70%; height: auto"
+                  />
+                  <figcaption>Museo Universitario Charcas</figcaption>
+                </figure>
+              </td>
+              <td style="text-align: center; padding: 10px">
+                <figure>
+                  <img
+                    src="imagen/sucre6.jpg"
+                    alt="Templo de La Merced"
+                    style="width: 100%; height: auto"
+                  />
+                  <figcaption>Templo de La Merced</figcaption>
+                </figure>
+              </td>
+            </tr>
+
+            <!-- Fin tabla -->
+          </table>
+        </div>
+
+        <!-- Sección Cultura -->
+        <div id="cultura" style="display: none">
+          <h2>Cultura</h2>
+          <p>
+            La cultura en Sucre es vibrante y diversa, con festivales que
+            celebran la música y las tradiciones locales. Un grupo musical
+            reconocido de la ciudad es "La Razza". Puedes ver uno de sus videos
+            aquí:
+          </p>
+
+          <!-- Mostrando vista previa del video -->
+          <div style="text-align: center">
+            <!-- Yotube no permite la vista previa de este video :-o quizás sean los derechos de autor? -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/watch?v=z4Vi7N--zFc"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- Enlace al video: por lo mismo agregue el enlace -->
+          <p style="text-align: center">
+            <a href="https://www.youtube.com/watch?v=a12qcdBvusw"
+              >Ver Video GRUPO LA RAZZA y las VOCES DE ORO - Orgulloso de ser
+              K´arapanza</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Área de Comentarios -->
+      <aside class="comentarios">
+        <h2>Comentarios</h2>
+        <form action="#" method="post">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="comment">Comentario:</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+
+          <input type="submit" value="Enviar Comentario" />
+        </form>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Sucre es la Capital de Bolivia.</p>
+    </footer>
+
+    <script>
+      // Script navegación dentro del contenido
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+
+          document.querySelectorAll("section > div").forEach((div) => {
+            div.style.display = "none"; // Aquí me permite ocultar todas las secciones
+          });
+
+          document.getElementById(targetId).style.display = "block"; // Haciendo clic mostrará solo la sección seleccionada
+        });
+      });
+
+      // Aquí se ocultará todas las secciones excepto la bienvenida :-)
+      document.querySelectorAll("section > div").forEach((div) => {
+        div.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
+<!--Ingeniero, agradezco que pueda tomar en cuenta. Saludos desde Sucre -->
